@@ -8,7 +8,7 @@ export default class UsersController {
 
   public async getOne({ request }: HttpContextContract) {
     const reqId = request.param('id')
-    return await User.findOrFail(reqId)
+    return await User.find(reqId)
   }
 
   public async create({ request }: HttpContextContract) {
